@@ -5,7 +5,7 @@ export async function sendMessage(channelId:string, message:string){
         throw new Error("Missing config");
     }
     try{
-        const response = await fetch(`https://discord.com/api/v10/channels/${channelId}`, {
+        const response = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

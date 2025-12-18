@@ -2,7 +2,10 @@
     "compilerOptions": {
         "strict": true,
         "outDir": "dist",
-        "module": "nodenext"
+        "module": "nodenext",
+        "target": "es2020",
+        "moduleResolution": "nodenext",
+        "declaration": true
     },
     "include": ["src/**/*"]
 }
