@@ -1,4 +1,4 @@
-import { confStat, configs, sendError } from "./index.js";
+import { confStat, configs, sendError } from "./config.js";
 
 export async function sendMessage(channelId:string, message:string){
     if(!confStat){
