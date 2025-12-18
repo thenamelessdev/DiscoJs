@@ -1,0 +1,21 @@
+{
+  "name": "discojs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thenamelessdev/DiscoJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/thenamelessdev/DiscoJs/issues"
+  },
+  "homepage": "https://github.com/thenamelessdev/DiscoJs#readme"
+}
