@@ -25,3 +25,26 @@ export async function sendMessage(channelId: string, message: string) {
         throw new Error("There was an error while sending the api request.");
     }
 }
+
+export async function deleteMessage(messageId:string, channelId:string) {
+    if (!confStat) {
+        throw new Error("Missing config");
+    }
+    try {
+        const response = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages/${messageId}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bot ${configs.token}`
+            }
+        });
+        if (!response.ok) {
+            await sendError(`There was an error while sending the api request. Status code: ${response.status}`);
+            throw new Error(`There was an error while sending the api request. Status code: ${response.status}`);
+        }
+    }
+    catch (err) {
+        await sendError("There was an error while sending the api request.");
+        throw new Error("There was an error while sending the api request.");
+    }
+}
