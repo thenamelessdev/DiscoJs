@@ -1,3 +1,5 @@
+export * from "./messages.js";
+
 interface configInteface{
     token?: string,
     errorChannelId?: string
