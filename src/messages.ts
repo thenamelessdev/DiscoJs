@@ -1,6 +1,6 @@
 import { confStat, configs, sendError } from "./config.js";
 
-export async function sendMessage(channelId: string, message: string) {
+export async function sendMessage(channelId: string, message?: string, embeds?:any) {
     if (!confStat) {
         throw new Error("Missing config");
     }
@@ -12,7 +12,8 @@ export async function sendMessage(channelId: string, message: string) {
                 "Authorization": `Bot ${configs.token}`
             },
             body: JSON.stringify({
-                content: message
+                content: message,
+                embeds: embeds
             })
         });
         if (!response.ok) {
