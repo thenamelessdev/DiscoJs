@@ -1,6 +1,6 @@
 {
   "name": "@thenamelessdev/discojs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "DiscoJs is a tool to help you build interaction endpoint Discord bots. Using this you can make a serverless Discord bot.",
   "main": "dist/index.js",
   "scripts": {
