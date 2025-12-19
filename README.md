@@ -16,7 +16,7 @@ To configure you have to call the config function and give it theese params:
 - deleteMessage
   - messageId: the ID of the message you want to delete
   - channelId: the channel ID of the message you want to delete
-## Webhook: Interact with webhook emdpoints
+## Webhook: Interact with webhook endpoints
 - executeWebhook
   - url: the webhook url (example: https://discord.com/api/v10/webhooks/webhookid/webhooktoken)
   - message: the message (optional)
