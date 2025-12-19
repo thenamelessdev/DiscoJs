@@ -83,3 +83,32 @@ export async function replyMessage(messageId:string, channelId: string, message?
         throw new Error("There was an error while sending the api request.");
     }
 }
+
+export async function editMessage(channelId: string, messageId:string, message?: string, embeds?:any) {
+    if (!confStat) {
+        throw new Error("Missing config");
+    }
+    try {
+        const response = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages/${messageId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bot ${configs.token}`
+            },
+            body: JSON.stringify({
+                content: message,
+                embeds: embeds
+            })
+        });
+        if (!response.ok) {
+            await sendError(`There was an error while sending the api request. Status code: ${response.status}`);
+            throw new Error(`There was an error while sending the api request. Status code: ${response.status}`);
+        }
+        const json = await response.json();
+        return json;
+    }
+    catch (err) {
+        await sendError("There was an error while sending the api request.");
+        throw new Error("There was an error while sending the api request.");
+    }
+}

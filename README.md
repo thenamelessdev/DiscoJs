@@ -9,7 +9,7 @@ To configure you have to call the config function and give it theese params:
   - Your Discord channel for errors. If there is an error with anything the error message will be sent there and into the console. Make sure your bot has send messages access to it
 # Functions
 ## Message: Interact with message endpoints
-**All message functions that create a message will return a [message object](https://discord.com/developers/docs/resources/message#message-object)**
+**All message functions that create or modify a message will return a [message object](https://discord.com/developers/docs/resources/message#message-object)**
 - sendMessage
   - channelId: the channel ID where the message should be sent
   - message: the message (optional)
@@ -22,7 +22,12 @@ To configure you have to call the config function and give it theese params:
   - channelId: the channel the message you want to reply to is in
   - message: the message you want to reply with (optional)
   - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
-## Webhook: Interact with webhook endpoints
+- editMessage channelId: string, messageId:string, message?: string, embeds?:any
+  - channelId: the channel ID of the message you want to edit
+  - messageId: the message ID of the message you want to edit
+  - message: the message (optional)
+  - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
+## Webhook: Interact with webhook endpoints (does not require config)
 - executeWebhook
   - url: the webhook url (example: https://discord.com/api/v10/webhooks/webhookid/webhooktoken)
   - message: the message (optional)
