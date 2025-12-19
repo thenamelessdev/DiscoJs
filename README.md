@@ -9,6 +9,7 @@ To configure you have to call the config function and give it theese params:
   - Your Discord channel for errors. If there is an error with anything the error message will be sent there and into the console. Make sure your bot has send messages access to it
 # Functions
 ## Message: Interact with message endpoints
+**All message functions that create a message will return a [message object](https://discord.com/developers/docs/resources/message#message-object)**
 - sendMessage
   - channelId: the channel ID where the message should be sent
   - message: the message (optional)
