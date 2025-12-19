@@ -20,6 +20,8 @@ export async function sendMessage(channelId: string, message?: string, embeds?:a
             await sendError(`There was an error while sending the api request. Status code: ${response.status}`);
             throw new Error(`There was an error while sending the api request. Status code: ${response.status}`);
         }
+        const json = await response.json();
+        return json.id;
     }
     catch (err) {
         await sendError("There was an error while sending the api request.");
@@ -73,6 +75,8 @@ export async function replyMessage(messageId:string, channelId: string, message?
             await sendError(`There was an error while sending the api request. Status code: ${response.status}`);
             throw new Error(`There was an error while sending the api request. Status code: ${response.status}`);
         }
+        const json = await response.json();
+        return json.id;
     }
     catch (err) {
         await sendError("There was an error while sending the api request.");
