@@ -16,6 +16,11 @@ To configure you have to call the config function and give it theese params:
 - deleteMessage
   - messageId: the ID of the message you want to delete
   - channelId: the channel ID of the message you want to delete
+- replyMessage
+  - messageId: the message you want to reply to
+  - channelId: the channel the message you want to reply to is in
+  - message: the message you want to reply with (optional)
+  - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
 ## Webhook: Interact with webhook endpoints
 - executeWebhook
   - url: the webhook url (example: https://discord.com/api/v10/webhooks/webhookid/webhooktoken)
