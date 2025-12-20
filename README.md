@@ -22,11 +22,17 @@ To configure you have to call the config function and give it theese params:
   - channelId: the channel the message you want to reply to is in
   - message: the message you want to reply with (optional)
   - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
-- editMessage channelId: string, messageId:string, message?: string, embeds?:any
+- editMessage channelId:
   - channelId: the channel ID of the message you want to edit
   - messageId: the message ID of the message you want to edit
   - message: the message (optional)
   - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
+- pinMessage:
+  - channelId: the channel ID of the channel the message is in
+  - messageId: the ID of the message you want to pin
+- unpinMessage:
+  - channelId: the channel ID of the channel the message is in
+  - messageId: the ID of the message you want to unpin
 ## Webhook: Interact with webhook endpoints (does not require config)
 - executeWebhook
   - url: the webhook url (example: https://discord.com/api/v10/webhooks/webhookid/webhooktoken)
@@ -34,3 +40,9 @@ To configure you have to call the config function and give it theese params:
   - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
 - deleteWebhook
   - url: the webhook url to delete
+## Useful: useful things
+- api:endpoint:
+  - endpoint: the endpoint you want to interact with
+  - method: the method you want to send the api request with (example: POST)
+  - body: the json body (optional)
+  - auth: true if you want to add the auth headers
