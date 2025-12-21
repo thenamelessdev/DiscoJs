@@ -40,6 +40,11 @@ To configure you have to call the config function and give it theese params:
   - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
 - deleteWebhook
   - url: the webhook url to delete
+- editWebhookMessage:url:string, messageId:string, message?:string, embeds?: any
+  - url: the webhook url
+  - messageId: the message id you want to edit
+  - message: the message (optional)
+  - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
 ## Useful: useful things
 - api:endpoint:
   - endpoint: the endpoint you want to interact with
