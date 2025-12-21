@@ -40,14 +40,24 @@ To configure you have to call the config function and give it theese params:
   - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
 - deleteWebhook
   - url: the webhook url to delete
-- editWebhookMessage:url:string, messageId:string, message?:string, embeds?: any
+- editWebhookMessage:
   - url: the webhook url
   - messageId: the message id you want to edit
   - message: the message (optional)
   - embeds: an array of [embed objects](https://discord.com/developers/docs/resources/message#embed-object) (optional)
 ## Useful: useful things
-- api:endpoint:
+- api:
   - endpoint: the endpoint you want to interact with
   - method: the method you want to send the api request with (example: POST)
   - body: the json body (optional)
   - auth: true if you want to add the auth headers
+## Guilds: ineract with guild api
+- ban:
+  - guildId: the server id of the server you want to ban
+  - userId: the id of the user you want to ban
+- unban:
+  - guildId: the server id of the server you want to unban
+  - userId: the id of the user you want to unban
+- kick:
+  - guildId: the server id of the server you want to kick
+  - userId: the id of the user you want to kick
